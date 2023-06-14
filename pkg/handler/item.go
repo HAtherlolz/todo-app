@@ -100,6 +100,8 @@ func (h *Handler) updateItem(c *gin.Context) {
 	if err := h.services.TodoItem.Update(userId, id, inputData); err != nil {
 		newErrorResponse(c, http.StatusInternalServerError, err.Error())
 	}
+
+	c.JSON(http.StatusOK, statusResponse{Status: "Ok"})
 }
 
 func (h *Handler) deleteItem(c *gin.Context) {
