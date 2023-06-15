@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  app:
+    build: ./
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+    environment:
+      - DB_PASSWORD=qwerty
+
+  db:
+    restart: always
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: todo_app
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: qwerty
+    ports:
+      - 5436:5432
+    volumes:
+      - ./db:/var/lib/postgresql/data
