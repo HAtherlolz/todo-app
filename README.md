@@ -14,11 +14,11 @@
 
 
 ## Swagger url: 
-- `{domain}/docs/index.html`
+- # `{domain}/docs/index.html`
 
 
 # 3. Run Docker Container
-- `docker-compose up --build`
+- # `docker-compose up --build`
 
 ## 4. Used libraries 
     - # TODO - the list of all libraries
