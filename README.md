@@ -10,7 +10,9 @@ DB_PASSWORD="password"
     make run
 
 ## Run migrations
-    # TODO - all migration commands
+    Create migration files (up, down) in ./schema dir - `migrate create -ext sql -dir ./schema -seq init`
+    Apply migrations - `migrate -path ./schema -database 'postgres://dbuser:dbpassword@dbhost:dbport/dbname?sslmode=dbsslmode' up`
+    
 
 ## Run Docker Container
     docker-compose up --build
@@ -18,5 +20,17 @@ DB_PASSWORD="password"
 ## Swagger url: 
     {domain}/docs/index.html
 
-## Used libraries 
-    # TODO - the list of all libraries
+## Used libraries
+    SWAGGER mod         -    `github.com/swaggo/swag`
+    SWAGGER mod         -    `github.com/swaggo/files`
+    SWAGGER GIN mod     -    `github.com/swaggo/gin-swagger`
+    ORM mod             -    `github.com/jmoiron/sqlx`
+    DOTENV mod          -    `github.com/joho/godotenv`
+    PG DRIVER mod       -    `github.com/lib/pq`
+    LOGGER mod          -    `github.com/sirupsen/logrus`
+    CONFIG mod          -    `github.com/spf13/viper`
+    JWT mod             -    `github.com/dgrijalva/jwt-go`
+    
+    
+
+    
